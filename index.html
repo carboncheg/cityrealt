@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta charset="utf-8">
+		
+		<link href="img/icons/favicon.png" rel="icon" type="image/x-icon">
+		
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		
+		<title>СитиРиэлт</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+		
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="css/style_adaptive.css"/>
+		
+		<script src="js/jquery.min.js"></script>
+		
+		<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		
+		<script src="js/jquery.poshytip.min.js"></script><!-- Подсказки -->
+		<script src="js/jquery.maskedinput-1.3.min.js"></script><!-- Маски ввода -->
+		
+		<script src="js/ui.js"></script><!-- Собственные скрипты -->
+		
+		<script src="js/form.js"></script><!-- Обработка формы -->
+		
+	</head>
+<body>
+
+
+<!-- Шапка -->
+<header class="header">
+	<div class="inner">
+		
+		<h1 class="header__logo">ситириэлт</h1>
+		
+		<nav class="header__menu">
+			<a href="#company">Компания</a>
+			<a href="#advantages">Преимущества</a>
+			<a href="#contacts">Контакты</a>
+		</nav>
+		
+		<button class="header__menu__trigger"><span></span></button>
+		
+	</div>
+</header>
+
+
+<!-- Старт -->
+<div class="start">
+	<div class="inner">
+		
+		<h2 class="start__title">Квартиры в Перми</h2>
+		
+		<h3 class="start__subtitle">Агентство недвижимости</h3>
+		
+		<div class="start__button">Заказать консультацию</div>
+		
+	</div>
+</div>
+
+
+<!-- Компания -->
+<div class="company" id="company">
+	<div class="inner">
+		
+		<h2 class="ui_title">Компания СитиРиэлт</h2>
+		
+		<div class="company__grid">
+		
+			<div class="company__grid__item">
+				<img src="img/photos/about_1.jpg" alt="Компания СитиРиэлт, офис">
+				<span>
+					Уютный офис<br>
+					в центре Перми
+				</span>
+			</div>
+		
+			<div class="company__grid__item">
+				<img src="img/photos/about_2.jpg" alt="Компания СитиРиэлт, офис">
+				<span>
+					Компетентные<br>
+					специалисты
+				</span>
+			</div>
+		
+			<div class="company__grid__item">
+				<img src="img/photos/about_3.jpg" alt="Компания СитиРиэлт, офис">
+				<span>
+					Простые решения<br>
+					сложных задач
+				</span>
+			</div>
+		
+			<div class="company__grid__item">
+				<img src="img/photos/about_4.jpg" alt="Компания СитиРиэлт, офис">
+				<span>
+					Круглосуточная<br>
+					поддержка
+				</span>
+			</div>
+		
+		</div>
+		
+	</div>
+</div>
+
+
+<!-- Преимущества -->
+<div class="advantages" id="advantages">
+	<div class="inner">
+		
+		<h2 class="ui_title">Преимущества</h2>
+		
+		<div class="ad__grid">
+		
+			<div class="ad__grid__item -sales">
+				Скидки<br>
+				новым клиентам
+			</div>
+		
+			<div class="ad__grid__item -person">
+				Быстрый<br>
+				выезд специалиста
+			</div>
+		
+			<div class="ad__grid__item -documents">
+				Бесплатная<br>
+				подготовка документов
+			</div>
+		
+			<div class="ad__grid__item -gear">
+				Большой<br>
+				опыт работы
+			</div>
+		
+		</div>
+		
+	</div>
+</div>
+
+
+<!-- Контакты -->
+<div class="contacts" id="contacts">
+	<div class="inner">
+		
+		<h2 class="ui_title">Контакты</h2>
+		
+		<div class="contacts__item">
+			Адрес
+		</div>
+		
+		<div class="contacts__separator"></div>
+		
+		<a href="tel:+79128132317" class="contacts__item">
+			+7 912 813 23 17
+		</a>
+		
+		<div class="contacts__separator"></div>
+		
+		<a href="mailto:mail@mail.ru" class="contacts__item">
+			mail@mail.ru
+		</a>
+		
+	</div>
+	
+	<!-- Карта -->
+	<div id="map"></div>
+	
+</div>
+
+
+<!-- Футер -->
+<footer class="footer">
+	<div class="inner">
+		
+		<div class="footer__left">
+			&copy; СитиРиэлт 2017
+		</div>
+		
+		<div class="footer__right">
+			
+			<a href="#" class="social -email"></a>
+			<a href="#" class="social -vk"></a>
+			<a href="#" class="social -facebook"></a>
+			<a href="#" class="social -instagram"></a>
+			<a href="#" class="social -youtube"></a>
+			
+		</div>
+		
+	</div>
+</footer>
+
+
+<div class="modal_bg"></div>
+
+<div class="modal">
+
+	<div class="form">
+		
+		<div class="form__item">
+			<label>Ваше имя:</label>
+			<div class="form__item__content">
+				<input type="text" placeholder="Введите имя" title="Поле должно быть заполнено" id="name" required>
+			</div>
+		</div>
+		
+		<div class="form__item">
+			<label>Телефон:</label>
+			<div class="form__item__content">
+				<input type="phone" placeholder="Введите свой телефон" title="Пример заполнения: +7 950 123-45-67" id="phone">
+			</div>
+		</div>
+		
+		<div class="form__item">
+			<label>Эл. почта:</label>
+			<div class="form__item__content">
+				<input type="text" placeholder="Введите адрес эл. почты" title="Пример заполнения: mail@site.ru" id="email">
+			</div>
+		</div>
+		
+		<div class="form__item">
+			<label>Сообщение:</label>
+			<div class="form__item__content">
+				<textarea placeholder="Введите ваше сообщение" title="Поле должно быть заполнено" id="message"></textarea>
+			</div>
+		</div>
+		
+		<div class="form__item">
+			<div class="form__item__content">
+				<button id="submit">Отправить</button>
+			</div>
+		</div>
+		
+	</div>
+	
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
